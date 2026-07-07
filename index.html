@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>种一方青蔬，修一寸本心，结一世善缘</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f5f7f4;
+      color: #1f2933;
+    }
+    header {
+      padding: 16px 20px;
+      background: #1b4332;
+      color: #fff;
+    }
+    header h1 {
+      margin: 0 0 6px;
+      font-size: 1.4rem;
+    }
+    header p {
+      margin: 0;
+      opacity: 0.9;
+      font-size: 0.95rem;
+    }
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+    .map-wrap {
+      background: #fff;
+      border-radius: 10px;
+      padding: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      overflow: auto;
+    }
+    .map-container {
+      position: relative;
+      width: 100%;
+      max-width: 4704px;
+      line-height: 0;
+    }
+    .map-container img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .hotspot-layer {
+      position: absolute;
+      inset: 0;
+    }
+    .hotspot-layer a {
+      position: absolute;
+      display: block;
+      cursor: pointer;
+      background: transparent;
+      border: 0;
+      z-index: 2;
+    }
+    .hotspot-layer a:hover {
+      background: rgba(255, 235, 59, 0.35);
+      outline: 2px solid rgba(255, 193, 7, 0.9);
+    }
+    .legend {
+      margin-top: 16px;
+      background: #fff;
+      border-radius: 10px;
+      padding: 16px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    }
+    .legend h2 {
+      margin: 0 0 12px;
+      font-size: 1.1rem;
+    }
+    .legend ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
+      gap: 8px;
+    }
+    .legend a {
+      display: block;
+      text-align: center;
+      padding: 8px 6px;
+      border-radius: 6px;
+      background: #edf7f0;
+      color: #1b4332;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .legend a:hover {
+      background: #d8f3dc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>种一方青蔬，修一寸本心，结一世善缘</h1>
+    <p>点击航拍图上的编号区域，或下方列表中的编号，跳转到对应菜地页面。</p>
+  </header>
+  <main>
+    <section class="map-wrap">
+      <div class="map-container" id="map-container">
+        <img src="https://evileyes.oss-cn-hangzhou.aliyuncs.com/%E8%8F%9C%E5%9C%B0/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_2026-07-02_160002_814.jpg" width="4704" height="2901" alt="菜地航拍图" id="map-image">
+        <div class="hotspot-layer" id="hotspot-layer">
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a4619b3750c1ad6866b1c77" target="_blank" rel="noopener noreferrer" title="1号" aria-label="1号" style="left:24.0646%;top:66.8390%;width:3.3588%;height:3.6539%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a4623a2b8553c57512580e9" target="_blank" rel="noopener noreferrer" title="2号" aria-label="2号" style="left:27.4022%;top:68.8383%;width:3.4864%;height:3.4471%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a4623ad750c1ad6866b1cf7" target="_blank" rel="noopener noreferrer" title="3号" aria-label="3号" style="left:30.2083%;top:70.7687%;width:3.4014%;height:3.3092%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a4623ba8e60d19a7562110c" target="_blank" rel="noopener noreferrer" title="4号" aria-label="4号" style="left:33.3546%;top:72.5267%;width:3.4439%;height:3.3781%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a4623d9e108e856a7356ee0" target="_blank" rel="noopener noreferrer" title="5号" aria-label="5号" style="left:36.3520%;top:74.0434%;width:4.0391%;height:4.0676%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a4623e4f75240254e0b4dbf" target="_blank" rel="noopener noreferrer" title="6号" aria-label="6号" style="left:31.9303%;top:76.2840%;width:3.8690%;height:4.2054%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a4623eff75240254e0b4dc0" target="_blank" rel="noopener noreferrer" title="7号" aria-label="7号" style="left:27.7211%;top:78.3178%;width:4.0816%;height:3.7229%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a4623fab8553c57512580ed" target="_blank" rel="noopener noreferrer" title="8号" aria-label="8号" style="left:41.4328%;top:70.9411%;width:2.6361%;height:2.8266%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a462406a521758283418e81" target="_blank" rel="noopener noreferrer" title="9号" aria-label="9号" style="left:38.3929%;top:69.5277%;width:2.6786%;height:2.4819%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a462410a521758283418e82" target="_blank" rel="noopener noreferrer" title="10号" aria-label="10号" style="left:40.8801%;top:66.9080%;width:2.6361%;height:2.2751%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a46241cb8553c57512580ee" target="_blank" rel="noopener noreferrer" title="11号" aria-label="11号" style="left:42.2832%;top:65.6325%;width:2.7636%;height:1.8614%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a462427e108e856a7356ee3" target="_blank" rel="noopener noreferrer" title="12号" aria-label="12号" style="left:43.8776%;top:64.3916%;width:2.6361%;height:1.6546%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a462431b8553c57512580ef" target="_blank" rel="noopener noreferrer" title="13号" aria-label="13号" style="left:45.3656%;top:62.8404%;width:2.5085%;height:1.8614%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a46243d38601853495d4b50" target="_blank" rel="noopener noreferrer" title="14号" aria-label="14号" style="left:46.7049%;top:61.5305%;width:2.6361%;height:1.8614%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a462448b8553c57512580f6" target="_blank" rel="noopener noreferrer" title="15号" aria-label="15号" style="left:48.1718%;top:60.1172%;width:2.5935%;height:1.9304%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a462453e108e856a7356ee7" target="_blank" rel="noopener noreferrer" title="16号" aria-label="16号" style="left:49.4260%;top:58.7384%;width:2.6786%;height:1.8614%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a462460e108e856a7356ee8" target="_blank" rel="noopener noreferrer" title="17号" aria-label="17号" style="left:46.0459%;top:70.9411%;width:2.5935%;height:1.7925%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a46246ab8553c57512580f9" target="_blank" rel="noopener noreferrer" title="18号" aria-label="18号" style="left:48.4269%;top:69.9759%;width:2.4235%;height:1.9304%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a46248ae108e856a7356eec" target="_blank" rel="noopener noreferrer" title="19号" aria-label="19号" style="left:49.7874%;top:68.4936%;width:2.3810%;height:1.7925%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a46249d750c1ad6866b1d04" target="_blank" rel="noopener noreferrer" title="20号" aria-label="20号" style="left:51.0204%;top:67.0114%;width:2.4235%;height:1.6546%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a4624a7750c1ad6866b1d09" target="_blank" rel="noopener noreferrer" title="21号" aria-label="21号" style="left:52.4872%;top:65.5981%;width:2.2959%;height:1.5167%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a4624b7a521758283418e8a" target="_blank" rel="noopener noreferrer" title="22号" aria-label="22号" style="left:53.7415%;top:64.3226%;width:2.4235%;height:1.5167%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a4624c2a521758283418e8b" target="_blank" rel="noopener noreferrer" title="23号" aria-label="23号" style="left:55.0383%;top:62.7715%;width:2.4660%;height:1.5857%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a4624cb750c1ad6866b1d0b" target="_blank" rel="noopener noreferrer" title="24号" aria-label="24号" style="left:56.9728%;top:64.4605%;width:2.6786%;height:1.8614%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a4624dbf75240254e0b4dc8" target="_blank" rel="noopener noreferrer" title="25号" aria-label="25号" style="left:55.4634%;top:66.2530%;width:2.7636%;height:1.9304%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a4624e7a521758283418e8d" target="_blank" rel="noopener noreferrer" title="26号" aria-label="26号" style="left:53.6352%;top:68.1489%;width:2.6361%;height:1.7925%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a4624f0b8553c57512580fb" target="_blank" rel="noopener noreferrer" title="27号" aria-label="27号" style="left:48.6820%;top:48.0179%;width:2.3810%;height:1.7925%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a4624fb38601853495d4b5a" target="_blank" rel="noopener noreferrer" title="28号" aria-label="28号" style="left:50.6165%;top:48.6729%;width:2.5085%;height:1.5167%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a462507750c1ad6866b1d0e" target="_blank" rel="noopener noreferrer" title="29号" aria-label="29号" style="left:52.6573%;top:49.2589%;width:2.4660%;height:1.5857%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a462512750c1ad6866b1d10" target="_blank" rel="noopener noreferrer" title="30号" aria-label="30号" style="left:46.3010%;top:49.5002%;width:2.2534%;height:1.5857%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a462521e108e856a7356ef0" target="_blank" rel="noopener noreferrer" title="31号" aria-label="31号" style="left:48.0017%;top:49.9483%;width:2.2109%;height:1.5857%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a46252c3763970f1fbfb87f" target="_blank" rel="noopener noreferrer" title="32号" aria-label="32号" style="left:49.6599%;top:50.8445%;width:2.0833%;height:1.5167%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a462537a521758283418e8f" target="_blank" rel="noopener noreferrer" title="33号" aria-label="33号" style="left:51.2117%;top:51.3271%;width:2.0833%;height:1.3788%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a4625423763970f1fbfb882" target="_blank" rel="noopener noreferrer" title="34号" aria-label="34号" style="left:44.2389%;top:51.3271%;width:2.0833%;height:1.5167%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a46254b3763970f1fbfb883" target="_blank" rel="noopener noreferrer" title="35号" aria-label="35号" style="left:45.7908%;top:52.1200%;width:2.0408%;height:1.3788%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a462555f75240254e0b4dcc" target="_blank" rel="noopener noreferrer" title="36号" aria-label="36号" style="left:47.3639%;top:52.9128%;width:2.0833%;height:1.2410%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a46255e38601853495d4b5d" target="_blank" rel="noopener noreferrer" title="37号" aria-label="37号" style="left:48.8520%;top:53.6711%;width:1.9558%;height:1.3788%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a462568750c1ad6866b1d18" target="_blank" rel="noopener noreferrer" title="38号" aria-label="38号" style="left:42.1769%;top:53.7056%;width:2.0833%;height:1.3788%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a462572750c1ad6866b1d19" target="_blank" rel="noopener noreferrer" title="39号" aria-label="39号" style="left:43.8138%;top:54.2227%;width:2.1259%;height:1.3788%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a46257ba521758283418e96" target="_blank" rel="noopener noreferrer" title="40号" aria-label="40号" style="left:45.2806%;top:55.1534%;width:1.7857%;height:0.8962%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a462585750c1ad6866b1d1a" target="_blank" rel="noopener noreferrer" title="41号" aria-label="41号" style="left:46.7262%;top:55.4292%;width:1.9558%;height:1.2410%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a464cfef75240254e0b4e9f" target="_blank" rel="noopener noreferrer" title="42号" aria-label="42号" style="left:79.1667%;top:63.5298%;width:2.2109%;height:1.5167%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a464d07e108e856a7359512" target="_blank" rel="noopener noreferrer" title="43号" aria-label="43号" style="left:81.2713%;top:63.5298%;width:2.0833%;height:1.5857%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a464d11e108e856a7359514" target="_blank" rel="noopener noreferrer" title="44号" aria-label="44号" style="left:83.2058%;top:63.4264%;width:2.1259%;height:1.5857%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a464d1a8e60d19a75621a3b" target="_blank" rel="noopener noreferrer" title="45号" aria-label="45号" style="left:84.9490%;top:63.3575%;width:2.1259%;height:1.5857%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a464d23f75240254e0b4ea0" target="_blank" rel="noopener noreferrer" title="46号" aria-label="46号" style="left:86.9048%;top:63.2885%;width:2.0408%;height:1.5167%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a464d2ee108e856a7359517" target="_blank" rel="noopener noreferrer" title="47号" aria-label="47号" style="left:88.7968%;top:63.3919%;width:1.9558%;height:1.3788%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a464d388e60d19a75621a3c" target="_blank" rel="noopener noreferrer" title="48号" aria-label="48号" style="left:90.6888%;top:63.2885%;width:2.0833%;height:1.5857%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a464d42e108e856a7359518" target="_blank" rel="noopener noreferrer" title="49号" aria-label="49号" style="left:92.5595%;top:63.2541%;width:2.0408%;height:1.5857%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a464d4be108e856a7359519" target="_blank" rel="noopener noreferrer" title="50号" aria-label="50号" style="left:91.4753%;top:61.2892%;width:2.0833%;height:1.5857%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a464d5be108e856a735951a" target="_blank" rel="noopener noreferrer" title="51号" aria-label="51号" style="left:89.6046%;top:61.3926%;width:2.0408%;height:1.5857%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a465063b8553c575125a373" target="_blank" rel="noopener noreferrer" title="52号" aria-label="52号" style="left:87.6276%;top:61.4616%;width:2.1259%;height:1.6546%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a46506ef75240254e0b4ea7" target="_blank" rel="noopener noreferrer" title="53号" aria-label="53号" style="left:85.6718%;top:61.4960%;width:2.0833%;height:1.5167%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a465078750c1ad6866b1fa7" target="_blank" rel="noopener noreferrer" title="54号" aria-label="54号" style="left:83.6947%;top:61.5650%;width:2.2109%;height:1.5857%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a4650823763970f1fbfd2b5" target="_blank" rel="noopener noreferrer" title="55号" aria-label="55号" style="left:81.9515%;top:61.6339%;width:2.1259%;height:1.5857%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a465090750c1ad6866b1fa8" target="_blank" rel="noopener noreferrer" title="56号" aria-label="56号" style="left:80.2083%;top:61.6339%;width:2.1259%;height:1.6546%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a465099750c1ad6866b1fa9" target="_blank" rel="noopener noreferrer" title="57号" aria-label="57号" style="left:78.2100%;top:61.6684%;width:2.1259%;height:1.7925%;"></a>
+        <a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a4650a73763970f1fbfd2b6" target="_blank" rel="noopener noreferrer" title="58号" aria-label="58号" style="left:76.1905%;top:61.8407%;width:2.2109%;height:1.5167%;"></a>
+        </div>
+      </div>
+    </section>
+    <section class="legend">
+      <h2>编号列表</h2>
+      <ul>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a4619b3750c1ad6866b1c77" target="_blank" rel="noopener noreferrer">1号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a4623a2b8553c57512580e9" target="_blank" rel="noopener noreferrer">2号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a4623ad750c1ad6866b1cf7" target="_blank" rel="noopener noreferrer">3号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a4623ba8e60d19a7562110c" target="_blank" rel="noopener noreferrer">4号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a4623d9e108e856a7356ee0" target="_blank" rel="noopener noreferrer">5号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a4623e4f75240254e0b4dbf" target="_blank" rel="noopener noreferrer">6号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a4623eff75240254e0b4dc0" target="_blank" rel="noopener noreferrer">7号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a4623fab8553c57512580ed" target="_blank" rel="noopener noreferrer">8号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a462406a521758283418e81" target="_blank" rel="noopener noreferrer">9号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a462410a521758283418e82" target="_blank" rel="noopener noreferrer">10号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a46241cb8553c57512580ee" target="_blank" rel="noopener noreferrer">11号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a462427e108e856a7356ee3" target="_blank" rel="noopener noreferrer">12号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a462431b8553c57512580ef" target="_blank" rel="noopener noreferrer">13号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a46243d38601853495d4b50" target="_blank" rel="noopener noreferrer">14号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a462448b8553c57512580f6" target="_blank" rel="noopener noreferrer">15号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a462453e108e856a7356ee7" target="_blank" rel="noopener noreferrer">16号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a462460e108e856a7356ee8" target="_blank" rel="noopener noreferrer">17号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a46246ab8553c57512580f9" target="_blank" rel="noopener noreferrer">18号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a46248ae108e856a7356eec" target="_blank" rel="noopener noreferrer">19号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a46249d750c1ad6866b1d04" target="_blank" rel="noopener noreferrer">20号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a4624a7750c1ad6866b1d09" target="_blank" rel="noopener noreferrer">21号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a4624b7a521758283418e8a" target="_blank" rel="noopener noreferrer">22号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a4624c2a521758283418e8b" target="_blank" rel="noopener noreferrer">23号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a4624cb750c1ad6866b1d0b" target="_blank" rel="noopener noreferrer">24号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a4624dbf75240254e0b4dc8" target="_blank" rel="noopener noreferrer">25号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a4624e7a521758283418e8d" target="_blank" rel="noopener noreferrer">26号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a4624f0b8553c57512580fb" target="_blank" rel="noopener noreferrer">27号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a4624fb38601853495d4b5a" target="_blank" rel="noopener noreferrer">28号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a462507750c1ad6866b1d0e" target="_blank" rel="noopener noreferrer">29号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a462512750c1ad6866b1d10" target="_blank" rel="noopener noreferrer">30号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a462521e108e856a7356ef0" target="_blank" rel="noopener noreferrer">31号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a46252c3763970f1fbfb87f" target="_blank" rel="noopener noreferrer">32号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a462537a521758283418e8f" target="_blank" rel="noopener noreferrer">33号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a4625423763970f1fbfb882" target="_blank" rel="noopener noreferrer">34号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a46254b3763970f1fbfb883" target="_blank" rel="noopener noreferrer">35号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a462555f75240254e0b4dcc" target="_blank" rel="noopener noreferrer">36号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a46255e38601853495d4b5d" target="_blank" rel="noopener noreferrer">37号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a462568750c1ad6866b1d18" target="_blank" rel="noopener noreferrer">38号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a462572750c1ad6866b1d19" target="_blank" rel="noopener noreferrer">39号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a46257ba521758283418e96" target="_blank" rel="noopener noreferrer">40号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a462585750c1ad6866b1d1a" target="_blank" rel="noopener noreferrer">41号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a464cfef75240254e0b4e9f" target="_blank" rel="noopener noreferrer">42号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a464d07e108e856a7359512" target="_blank" rel="noopener noreferrer">43号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a464d11e108e856a7359514" target="_blank" rel="noopener noreferrer">44号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a464d1a8e60d19a75621a3b" target="_blank" rel="noopener noreferrer">45号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a464d23f75240254e0b4ea0" target="_blank" rel="noopener noreferrer">46号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a464d2ee108e856a7359517" target="_blank" rel="noopener noreferrer">47号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a464d388e60d19a75621a3c" target="_blank" rel="noopener noreferrer">48号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a464d42e108e856a7359518" target="_blank" rel="noopener noreferrer">49号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a464d4be108e856a7359519" target="_blank" rel="noopener noreferrer">50号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a464d5be108e856a735951a" target="_blank" rel="noopener noreferrer">51号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a465063b8553c575125a373" target="_blank" rel="noopener noreferrer">52号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a46506ef75240254e0b4ea7" target="_blank" rel="noopener noreferrer">53号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a465078750c1ad6866b1fa7" target="_blank" rel="noopener noreferrer">54号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a4650823763970f1fbfd2b5" target="_blank" rel="noopener noreferrer">55号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a465090750c1ad6866b1fa8" target="_blank" rel="noopener noreferrer">56号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a465099750c1ad6866b1fa9" target="_blank" rel="noopener noreferrer">57号</a></li>
+      <li><a href="https://55e250a1640c9853.share.mingdao.net/public/record/6a4650a73763970f1fbfd2b6" target="_blank" rel="noopener noreferrer">58号</a></li>
+      </ul>
+    </section>
+  </main>
+  <script>
+    const HOTSPOTS = [{"n": 1, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a4619b3750c1ad6866b1c77", "x1": 1132, "y1": 1939, "x2": 1290, "y2": 2045}, {"n": 2, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a4623a2b8553c57512580e9", "x1": 1289, "y1": 1997, "x2": 1453, "y2": 2097}, {"n": 3, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a4623ad750c1ad6866b1cf7", "x1": 1421, "y1": 2053, "x2": 1581, "y2": 2149}, {"n": 4, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a4623ba8e60d19a7562110c", "x1": 1569, "y1": 2104, "x2": 1731, "y2": 2202}, {"n": 5, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a4623d9e108e856a7356ee0", "x1": 1710, "y1": 2148, "x2": 1900, "y2": 2266}, {"n": 6, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a4623e4f75240254e0b4dbf", "x1": 1502, "y1": 2213, "x2": 1684, "y2": 2335}, {"n": 7, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a4623eff75240254e0b4dc0", "x1": 1304, "y1": 2272, "x2": 1496, "y2": 2380}, {"n": 8, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a4623fab8553c57512580ed", "x1": 1949, "y1": 2058, "x2": 2073, "y2": 2140}, {"n": 9, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a462406a521758283418e81", "x1": 1806, "y1": 2017, "x2": 1932, "y2": 2089}, {"n": 10, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a462410a521758283418e82", "x1": 1923, "y1": 1941, "x2": 2047, "y2": 2007}, {"n": 11, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a46241cb8553c57512580ee", "x1": 1989, "y1": 1904, "x2": 2119, "y2": 1958}, {"n": 12, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a462427e108e856a7356ee3", "x1": 2064, "y1": 1868, "x2": 2188, "y2": 1916}, {"n": 13, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a462431b8553c57512580ef", "x1": 2134, "y1": 1823, "x2": 2252, "y2": 1877}, {"n": 14, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a46243d38601853495d4b50", "x1": 2197, "y1": 1785, "x2": 2321, "y2": 1839}, {"n": 15, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a462448b8553c57512580f6", "x1": 2266, "y1": 1744, "x2": 2388, "y2": 1800}, {"n": 16, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a462453e108e856a7356ee7", "x1": 2325, "y1": 1704, "x2": 2451, "y2": 1758}, {"n": 17, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a462460e108e856a7356ee8", "x1": 2166, "y1": 2058, "x2": 2288, "y2": 2110}, {"n": 18, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a46246ab8553c57512580f9", "x1": 2278, "y1": 2030, "x2": 2392, "y2": 2086}, {"n": 19, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a46248ae108e856a7356eec", "x1": 2342, "y1": 1987, "x2": 2454, "y2": 2039}, {"n": 20, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a46249d750c1ad6866b1d04", "x1": 2400, "y1": 1944, "x2": 2514, "y2": 1992}, {"n": 21, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a4624a7750c1ad6866b1d09", "x1": 2469, "y1": 1903, "x2": 2577, "y2": 1947}, {"n": 22, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a4624b7a521758283418e8a", "x1": 2528, "y1": 1866, "x2": 2642, "y2": 1910}, {"n": 23, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a4624c2a521758283418e8b", "x1": 2589, "y1": 1821, "x2": 2705, "y2": 1867}, {"n": 24, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a4624cb750c1ad6866b1d0b", "x1": 2680, "y1": 1870, "x2": 2806, "y2": 1924}, {"n": 25, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a4624dbf75240254e0b4dc8", "x1": 2609, "y1": 1922, "x2": 2739, "y2": 1978}, {"n": 26, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a4624e7a521758283418e8d", "x1": 2523, "y1": 1977, "x2": 2647, "y2": 2029}, {"n": 27, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a4624f0b8553c57512580fb", "x1": 2290, "y1": 1393, "x2": 2402, "y2": 1445}, {"n": 28, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a4624fb38601853495d4b5a", "x1": 2381, "y1": 1412, "x2": 2499, "y2": 1456}, {"n": 29, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a462507750c1ad6866b1d0e", "x1": 2477, "y1": 1429, "x2": 2593, "y2": 1475}, {"n": 30, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a462512750c1ad6866b1d10", "x1": 2178, "y1": 1436, "x2": 2284, "y2": 1482}, {"n": 31, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a462521e108e856a7356ef0", "x1": 2258, "y1": 1449, "x2": 2362, "y2": 1495}, {"n": 32, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a46252c3763970f1fbfb87f", "x1": 2336, "y1": 1475, "x2": 2434, "y2": 1519}, {"n": 33, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a462537a521758283418e8f", "x1": 2409, "y1": 1489, "x2": 2507, "y2": 1529}, {"n": 34, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a4625423763970f1fbfb882", "x1": 2081, "y1": 1489, "x2": 2179, "y2": 1533}, {"n": 35, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a46254b3763970f1fbfb883", "x1": 2154, "y1": 1512, "x2": 2250, "y2": 1552}, {"n": 36, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a462555f75240254e0b4dcc", "x1": 2228, "y1": 1535, "x2": 2326, "y2": 1571}, {"n": 37, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a46255e38601853495d4b5d", "x1": 2298, "y1": 1557, "x2": 2390, "y2": 1597}, {"n": 38, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a462568750c1ad6866b1d18", "x1": 1984, "y1": 1558, "x2": 2082, "y2": 1598}, {"n": 39, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a462572750c1ad6866b1d19", "x1": 2061, "y1": 1573, "x2": 2161, "y2": 1613}, {"n": 40, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a46257ba521758283418e96", "x1": 2130, "y1": 1600, "x2": 2214, "y2": 1626}, {"n": 41, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a462585750c1ad6866b1d1a", "x1": 2198, "y1": 1608, "x2": 2290, "y2": 1644}, {"n": 42, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a464cfef75240254e0b4e9f", "x1": 3724, "y1": 1843, "x2": 3828, "y2": 1887}, {"n": 43, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a464d07e108e856a7359512", "x1": 3823, "y1": 1843, "x2": 3921, "y2": 1889}, {"n": 44, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a464d11e108e856a7359514", "x1": 3914, "y1": 1840, "x2": 4014, "y2": 1886}, {"n": 45, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a464d1a8e60d19a75621a3b", "x1": 3996, "y1": 1838, "x2": 4096, "y2": 1884}, {"n": 46, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a464d23f75240254e0b4ea0", "x1": 4088, "y1": 1836, "x2": 4184, "y2": 1880}, {"n": 47, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a464d2ee108e856a7359517", "x1": 4177, "y1": 1839, "x2": 4269, "y2": 1879}, {"n": 48, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a464d388e60d19a75621a3c", "x1": 4266, "y1": 1836, "x2": 4364, "y2": 1882}, {"n": 49, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a464d42e108e856a7359518", "x1": 4354, "y1": 1835, "x2": 4450, "y2": 1881}, {"n": 50, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a464d4be108e856a7359519", "x1": 4303, "y1": 1778, "x2": 4401, "y2": 1824}, {"n": 51, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a464d5be108e856a735951a", "x1": 4215, "y1": 1781, "x2": 4311, "y2": 1827}, {"n": 52, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a465063b8553c575125a373", "x1": 4122, "y1": 1783, "x2": 4222, "y2": 1831}, {"n": 53, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a46506ef75240254e0b4ea7", "x1": 4030, "y1": 1784, "x2": 4128, "y2": 1828}, {"n": 54, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a465078750c1ad6866b1fa7", "x1": 3937, "y1": 1786, "x2": 4041, "y2": 1832}, {"n": 55, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a4650823763970f1fbfd2b5", "x1": 3855, "y1": 1788, "x2": 3955, "y2": 1834}, {"n": 56, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a465090750c1ad6866b1fa8", "x1": 3773, "y1": 1788, "x2": 3873, "y2": 1836}, {"n": 57, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a465099750c1ad6866b1fa9", "x1": 3679, "y1": 1789, "x2": 3779, "y2": 1841}, {"n": 58, "url": "https://55e250a1640c9853.share.mingdao.net/public/record/6a4650a73763970f1fbfd2b6", "x1": 3584, "y1": 1794, "x2": 3688, "y2": 1838}];
+    const IMAGE_WIDTH = 4704;
+    const IMAGE_HEIGHT = 2901;
+
+    function openHotspot(url) {
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
+
+    document.getElementById("map-image").addEventListener("click", (event) => {
+      const img = event.currentTarget;
+      const rect = img.getBoundingClientRect();
+      const scaleX = IMAGE_WIDTH / rect.width;
+      const scaleY = IMAGE_HEIGHT / rect.height;
+      const x = (event.clientX - rect.left) * scaleX;
+      const y = (event.clientY - rect.top) * scaleY;
+
+      for (const spot of HOTSPOTS) {
+        if (x >= spot.x1 && x <= spot.x2 && y >= spot.y1 && y <= spot.y2) {
+          openHotspot(spot.url);
+          return;
+        }
+      }
+    });
+  </script>
+</body>
+</html>
